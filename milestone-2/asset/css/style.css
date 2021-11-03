@@ -16,9 +16,14 @@ body{
 
 #Blocco-interattivo{
     margin-top: -80px;
-    height: 80vh;
+    height: 82vh;
     background-color: aliceblue;
 }
+
+
+
+
+
 
 /*---------------------------------------- blocchi aside ------------------------------------- */
 
@@ -140,15 +145,26 @@ aside{
 }
 
 /* -------- lista contatti ------*/
+
 #Blocco-Utenti #Blocco-Avatar{
     background-color: white;
     border: none;
     border-top: 0.5px solid #d4d4d4;
 }
 
+#Blocco-Utenti #Blocco-Avatar:hover{
+    background-color: #eaeaea;
+    cursor: pointer;
+}
 
 
-/*---------------------------------------- blocchi 'Blocco-Chatting' ------------------------------------------- */
+
+
+
+
+
+
+/*---------------------------------------- 'Blocco-Chatting' ------------------------------------------- */
 
 #Blocco-Chatting{
     height: 100%;

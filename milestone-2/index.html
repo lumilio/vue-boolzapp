@@ -26,7 +26,7 @@
                 <div class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
                     <div class="d-flex align-items-center">
                         <img src="./avatar-pics/avatar_4.jpg" class="Avatar-pic">
-                        <p class="Avatar-name">My Avatar</p>
+                        <p class="Avatar-name">My Account</p>
                     </div>
                     <div class="Icone-avatar">
                         <i class="fas fa-circle-notch"></i>
@@ -57,7 +57,12 @@
                  <!----------------lista contatti-->
 
                 <div id="Blocco-Utenti">
-                    <div v-for='(contact, index) in contacts' class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
+
+                    <div 
+                    v-for='(contact, index) in contacts' 
+                    v-on:click='selectChat(index)'
+                    class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
+
                         <div class="d-flex align-items-center">
                             <img v-bind:src="contact.foto" class="Avatar-pic">
                             <p class="Avatar-name">{{contact.name}}</p>
@@ -66,6 +71,8 @@
                 </div>
 
             </aside>
+
+
 
 
 
@@ -93,7 +100,7 @@
 
                 <div id="Blocco-Chat">
                     <div 
-                    v-for='(message, index) in contacts[0].messages' 
+                    v-for="message in contacts[active].messages" 
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
                         <div class="Box-messaggio">
@@ -101,7 +108,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <!----------------campo di testo-->
 
