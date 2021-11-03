@@ -150,3 +150,23 @@ aside{
 
 
 /* --------blocco ricerca utenti------*/
+
+#Blocco-Ricercautenti {
+    position: relative;
+}
+
+#Blocco-Ricercautenti input{
+    width: 92%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 45px;
+}
+
+#Blocco-Ricercautenti .fa-search{
+    position: absolute;
+    color: #b1b1b1;
+    left: 33px;
+
+}
+

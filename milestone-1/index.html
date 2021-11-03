@@ -16,22 +16,46 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
         <div class="container d-flex p-0" id="Blocco-interattivo">
-
             <aside class="col-4">
-                <div id="Blocco-Avatar">avatar</div>
-                <div id="Blocco-Banner"> banner</div>
-                <div id="Blocco-Ricercautenti"><input type="text"></div>
+
+                <!----------------blocco avatar personale-->
+
+                <div class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
+                    <div class="d-flex align-items-center">
+                        <img src="./avatar-pics/avatar_1.jpg" class="Avatar-pic">
+                        <p class="Avatar-name">Mario Rossi</p>
+                    </div>
+                    <div class="Icone-avatar">
+                        <i class="fas fa-circle-notch"></i>
+                        <i class="fas fa-comment-alt"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+               
+                <!----------------bunner notifiche-->
+
+                <div class="d-flex align-items-center justify-content-start" id="Blocco-Banner"> 
+                    <div class="Layer-bannericon d-flex align-items-center justify-content-center">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div class="Banner-txt d-flex flex-column justify-content-start">
+                        <p id="txt-banner1">Ricevi notifiche di nuovi messaggi</p>
+                        <a id="txt-banner2">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <!----------------blocco ricerca utenti-->
+
+                <div class="d-flex align-items-center justify-content-center" id="Blocco-Ricercautenti">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <i class="fas fa-search"></i>
+                </div>
+
+
+
+
+
                 <div id="Blocco-Utenti">
                     <p class="p-5">xxx</p>
                     <p class="p-5">xxx</p>
@@ -70,15 +94,6 @@
         </div>
     
    
-        
-
-
-
-
-
-
-
-
 
     </div>
 
