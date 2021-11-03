@@ -93,7 +93,11 @@
 
                 <div id="Blocco-Chat">
 
-                    <p v-for='(message, index) in contacts[0].messages' class="p-5">{{message.text}}</p>
+                    <div v-for='(message, index) in contacts[0].messages' v-bind:class ="(message.status == 'sent')?'bg-white':'bg-black'" class="p-5">
+                        
+                        <p>{{message.text}}</p>
+                        
+                    </div>
                     
                 </div>
 
