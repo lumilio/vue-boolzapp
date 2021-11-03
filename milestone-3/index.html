@@ -110,7 +110,11 @@
 
                 <div class="d-flex align-items-center justify-content-center" id="Blocco-Write">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" placeholder="Scrivi un messaggio" 
+                    v-model='newMessage'
+                    @keyup.enter='addMessage'>
+                    
+                    
                     <i class="fas fa-microphone"></i>
                 </div>
 

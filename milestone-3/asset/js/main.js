@@ -19,6 +19,8 @@ const app = new Vue({
     data: { 
 
         active: 0,
+        newMessage:'',
+        error: false,
 
         contacts: [
 
@@ -118,8 +120,36 @@ const app = new Vue({
 
     methods: { 
         selectChat(x){
-            app.active = x;
-        }  
+            this.active = x;
+        },
+
+
+        addMessage(){ 
+            if(this.newMessage !=''){  
+                this.contacts[this.active].messages.push(
+                    {
+                        date: '20/03/2020 16:30:00',
+                        text:this.newMessage,
+                        status: 'recived',
+                    });
+                    setTimeout(function () { app.contacts[app.active].messages.push(
+                        {
+                            date: '20/03/2020 16:30:00',
+                            text:'ciao sono un robot non ti posso rispondere',
+                            status: 'sent',
+                        }
+                    ) }, 1000)
+
+
+                this.error = false;
+
+
+            } else{  
+                this.error = true;
+            };
+    
+            this.newMessage = '';   
+        } 
     },
 
     
@@ -130,7 +160,7 @@ const app = new Vue({
 
 
 
-/* primo tentativo */
+/* primo tentativo milestone-2*/
 
 /* for (let i = 0; i < app.contacts.length; i++) {
     if(app.contacts[i] != app.contacts[x]){
