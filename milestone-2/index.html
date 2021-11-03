@@ -74,18 +74,15 @@
 
 
 
-
-
-
             <div class="col-8" id="Blocco-Chatting">  <!------------------------  Chat place  ------------------------> 
 
                 <!----------------dati interlocutore-->
 
                 <div class="d-flex justify-content-between align-items-center" id="Blocco-Chatter">
                     <div class="d-flex align-items-center">
-                        <img src="./avatar-pics/avatar_4.jpg" class="Avatar-pic">
+                        <img :src="contacts[active].foto" class="Avatar-pic">
                         <div class="Banner-txt d-flex flex-column justify-content-start">
-                            <p class="Avatar-name">milestone-1</p>
+                            <p class="Avatar-name">{{contacts[active].name}}</p>
                             <p class="Avatar-access">Ultimo accesso oggi alle</p>
                         </div>
                     </div>
