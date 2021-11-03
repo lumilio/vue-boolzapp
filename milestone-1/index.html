@@ -11,13 +11,15 @@
 <body>
 
     <div id="root">
-
-        <div class="container-fluid" id="Blocco-sfondo-1"></div>
+        <div class="container-fluid" id="Blocco-sfondo-1"></div> 
 
 
 
         <div class="container d-flex p-0" id="Blocco-interattivo">
-            <aside class="col-4">
+
+
+
+            <aside class="col-4">   <!------------------------  aside  ------------------------> 
 
                 <!----------------blocco avatar personale-->
 
@@ -72,20 +74,26 @@
 
 
 
-
-
-
-
-
-
-
-
             
-            <div class="col-8" id="Blocco-Chatting">
+            
+            <div class="col-8" id="Blocco-Chatting">  <!------------------------  Chat place  ------------------------> 
 
                 <!----------------dati interlocutore-->
 
-                <div id="Blocco-Chatter"> chatter</div>
+                <div class="d-flex justify-content-between align-items-center" id="Blocco-Chatter">
+                    <div class="d-flex align-items-center">
+                        <img src="./avatar-pics/avatar_1.jpg" class="Avatar-pic">
+                        <div class="Banner-txt d-flex flex-column justify-content-start">
+                            <p class="Avatar-name">Mario Rossi</p>
+                            <p class="Avatar-access">Ultimo accesso oggi alle</p>
+                        </div>
+                    </div>
+                    <div class="Icone-avatar">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
 
                 <!----------------lista messaggi-->
 
@@ -114,10 +122,8 @@
             </div>
 
 
-        </div>
-    
-   
 
+        </div>
     </div>
 
 

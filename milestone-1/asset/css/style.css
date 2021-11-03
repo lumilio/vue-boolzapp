@@ -20,9 +20,8 @@ body{
     background-color: aliceblue;
 }
 
+/*---------------------------------------- blocchi aside ------------------------------------- */
 
-
-/*---------- blocchi aside ------- */
 
 aside{
     height: 100%;
@@ -50,33 +49,7 @@ aside{
     overflow-y:scroll;
 }
 
-
-
-/*---------- blocchi 'Blocco-Chatting' ------- */
-
-#Blocco-Chatting{
-    height: 100%;
-}
-
-#Blocco-Chatter{
-    height: 100px;
-    background-color: #eaeaea;
-}
-
-#Blocco-Chat{
-    height: calc(100% - (100px + 90px));
-    background-image: url('css-picture/sfondochat.png');
-    overflow-y:scroll;
-}
-
-#Blocco-Write{
-    height: 90px;
-    background-color: #eaeaea;
-}
-
-
-
-/*------------- blocco avatar personale --- */
+/*------------- blocco x avatar personale --- */
 
 .Avatar-pic{
     width: 80px;
@@ -97,16 +70,15 @@ aside{
 }
 
 .Icone-avatar i{
-    font-size: 30px;
+    font-size: 25px;
     color: #b1b1b1;
-    padding: 8px;
+    padding: 11px;
 }
 
 .Icone-avatar i:hover{
     cursor: pointer;
     color: #585858;
 }
-
 
 
 /*---------- bunner notifiche ------- */
@@ -146,9 +118,6 @@ aside{
     color: #202020;
 }
 
-
-
-
 /* --------blocco ricerca utenti------*/
 
 #Blocco-Ricercautenti {
@@ -168,6 +137,42 @@ aside{
     color: #b1b1b1;
     left: 33px;
 
+}
+
+
+/*---------------------------------------- blocchi 'Blocco-Chatting' ------------------------------------------- */
+
+#Blocco-Chatting{
+    height: 100%;
+}
+
+#Blocco-Chatter{
+    height: 100px;
+    background-color: #eaeaea;
+}
+
+#Blocco-Chat{
+    height: calc(100% - (100px + 90px));
+    background-image: url('css-picture/sfondochat.png');
+    overflow-y:scroll;
+}
+
+#Blocco-Write{
+    height: 90px;
+    background-color: #eaeaea;
+}
+
+/* -------- dati interlocutore ------*/
+
+#Blocco-Chatter .Avatar-name{
+    margin: 0;
+    line-height: 30px;
+}
+
+#Blocco-Chatter .Avatar-access{
+    margin: 0;
+    line-height: 25px;
+    color: #585858;
 }
 
 
@@ -192,3 +197,33 @@ aside{
     cursor: pointer;
     color: #202020;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
