@@ -206,8 +206,19 @@ aside{
     color: #202020;
 }
 
+/* -------- Chat (lista messaggi) ------*/
 
 
+.Message-sent p{
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Message-recived p{
+    background-color: green;
+    justify-content: flex-end;
+}
 
 
 

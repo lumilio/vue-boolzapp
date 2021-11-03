@@ -91,15 +91,44 @@
 
                 <!----------------lista messaggi-->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div id="Blocco-Chat">
 
-                    <div v-for='(message, index) in contacts[0].messages' v-bind:class ="(message.status == 'sent')?'bg-white':'bg-black'" class="p-5">
+                    <div 
+                    v-for='(message, index) in contacts[0].messages' 
+                    v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
                         
                         <p>{{message.text}}</p>
                         
                     </div>
                     
                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                 <!----------------campo di testo-->
 
