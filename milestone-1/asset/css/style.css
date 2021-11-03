@@ -139,6 +139,13 @@ aside{
 
 }
 
+/* -------- lista contatti ------*/
+#Blocco-Utenti #Blocco-Avatar{
+    background-color: white;
+    border-top: 0.5px solid #d4d4d4;
+}
+
+
 
 /*---------------------------------------- blocchi 'Blocco-Chatting' ------------------------------------------- */
 
