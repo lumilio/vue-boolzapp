@@ -170,3 +170,25 @@ aside{
 
 }
 
+
+
+/* --------campo di testo------*/
+
+#Blocco-Write input{
+    width: 85%;
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 25px;
+}
+
+#Blocco-Write i{
+    font-size: 25px;
+    padding: 30px;
+    color: #585858;
+}
+
+#Blocco-Write i:hover{
+    cursor: pointer;
+    color: #202020;
+}
