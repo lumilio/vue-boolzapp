@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #dadbd5;
+}
+
+#Blocco-sfondo-1{
+    height: 150px;
+    background-color: #009688;
+}
+
+#Blocco-interattivo{
+    margin-top: -80px;
+    height: 80vh;
+    background-color: aliceblue;
+}
+
+/*---------------------------------------- blocchi aside ------------------------------------- */
+
+
+aside{
+    height: 100%;
+}
+
+#Blocco-Avatar{
+    height: 100px;
+    background-color: #eaeaea;
+    border-right: 1px solid #c2c2c2;
+}
+
+#Blocco-Banner{
+    height: 110px;
+    background-color: #8edafc;
+}
+
+#Blocco-Ricercautenti{
+    height: 50px;
+    background-color: #eaeaea;
+}
+
+#Blocco-Utenti{
+    height: calc(100% - (100px + 110px + 50px));
+    background-color: white;
+    overflow-y:scroll;
+}
+
+/*------------- blocco x avatar personale --- */
+
+.Avatar-pic{
+    width: 80px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.Avatar-name{
+    margin-left: 20px;
+    margin-bottom: 0;
+    line-height: 50px;
+    font-size: larger;
+}
+
+.Icone-avatar {
+    margin-right: 35px;
+}
+
+.Icone-avatar i{
+    font-size: 25px;
+    color: #b1b1b1;
+    padding: 11px;
+}
+
+.Icone-avatar i:hover{
+    cursor: pointer;
+    color: #585858;
+}
+
+
+/*---------- bunner notifiche ------- */
+
+.Layer-bannericon{
+    background-color: white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 25px;
+
+}
+
+.Layer-bannericon i{
+    color: #8edafc;
+    font-size: 30px;
+}
+
+.Banner-txt{
+    padding: 15px;
+}
+
+#txt-banner1{
+    font-size: larger;
+    margin-bottom: 0;
+}
+
+#txt-banner2{
+    padding: 5px;
+    padding-left: 0;
+    color: #585858;
+    text-decoration: underline;
+}
+
+#txt-banner2:hover{
+    cursor: pointer;
+    color: #202020;
+}
+
+/* --------blocco ricerca utenti------*/
+
+#Blocco-Ricercautenti {
+    position: relative;
+}
+
+#Blocco-Ricercautenti input{
+    width: 92%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 45px;
+}
+
+#Blocco-Ricercautenti .fa-search{
+    position: absolute;
+    color: #b1b1b1;
+    left: 33px;
+
+}
+
+/* -------- lista contatti ------*/
+#Blocco-Utenti #Blocco-Avatar{
+    background-color: white;
+    border: none;
+    border-top: 0.5px solid #d4d4d4;
+}
+
+
+
+/*---------------------------------------- blocchi 'Blocco-Chatting' ------------------------------------------- */
+
+#Blocco-Chatting{
+    height: 100%;
+}
+
+#Blocco-Chatter{
+    height: 100px;
+    background-color: #eaeaea;
+}
+
+#Blocco-Chat{
+    height: calc(100% - (100px + 90px));
+    background-image: url('css-picture/sfondochat.png');
+    overflow-y:scroll;
+}
+
+#Blocco-Write{
+    height: 90px;
+    background-color: #eaeaea;
+}
+
+/* -------- dati interlocutore ------*/
+
+#Blocco-Chatter .Avatar-name{
+    margin: 0;
+    line-height: 30px;
+}
+
+#Blocco-Chatter .Avatar-access{
+    margin: 0;
+    line-height: 25px;
+    color: #585858;
+}
+
+
+
+/* --------campo di testo------*/
+
+#Blocco-Write input{
+    width: 85%;
+    height: 65px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 25px;
+}
+
+#Blocco-Write i{
+    font-size: 25px;
+    padding: 30px;
+    color: #585858;
+}
+
+#Blocco-Write i:hover{
+    cursor: pointer;
+    color: #202020;
+}
+
+
+/* -------- Chat (lista messaggi) ------*/
+
+
+.Box-messaggio{
+    width: 100%;
+    display: flex;
+}
+
+.Message-sent .Box-messaggio{
+    justify-content: flex-start;
+}
+
+.Message-recived .Box-messaggio{
+    justify-content: flex-end;
+}
+
+.Message-sent p{
+    background-color: white;
+}
+
+.Message-recived p{
+    background-color: #d5f9ba;
+}
+
+.Message-recived p, .Message-sent p{
+    margin: 20px;
+    font-size: large;
+    padding: 1rem;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
