@@ -111,7 +111,9 @@
                     v-for='(message, index) in contacts[0].messages' 
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
                         
-                        <p>{{message.text}}</p>
+                        <div class="Box-messaggio">
+                            <p>{{message.text}}</p>
+                        </div>
                         
                     </div>
                     

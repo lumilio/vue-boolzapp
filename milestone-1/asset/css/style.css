@@ -209,15 +209,30 @@ aside{
 /* -------- Chat (lista messaggi) ------*/
 
 
+.Box-messaggio{
+    width: 100%;
+    display: flex;
+}
+
+.Message-sent .Box-messaggio{
+    justify-content: flex-start;
+}
+
+.Message-recived .Box-messaggio{
+    justify-content: flex-end;
+}
+
 .Message-sent p{
     background-color: grey;
+    width: 300;
     display: flex;
-    justify-content: flex-start;
+
 }
 
 .Message-recived p{
     background-color: green;
-    justify-content: flex-end;
+    width: 300;
+    display: flex;
 }
 
 
