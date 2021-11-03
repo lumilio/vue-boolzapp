@@ -1,0 +1,75 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-color: #b0c4de; 
+}
+
+.Main-Box{
+    margin-top: 200px;
+
+}
+
+.Main-Box img{
+    width: 250px;
+}
+
+.The-Form input{
+    width: 290px;
+    border-radius: 5px;
+    border: none;
+    padding: 2px 8px;
+}
+
+.The-Form button{
+    border-radius: 5px;
+    border: none;
+    padding: 2px 8px;
+}
+
+.Second-Box{
+    width: 350px;
+    min-height: 300px;
+    border-radius: 1rem;
+}
+
+.List-Title{
+    margin-left: 20px;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+
+.List-Box{
+    margin: 1rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    background-color: #e9e9e9;
+    border-radius: 1rem;
+}
+
+
+.List-Element{
+    margin-bottom: 15px;
+}
+
+.List-Box p,
+.List-Box i{
+    margin: 15px;
+}
+
+.List-Box i{
+    margin-right: 25px;
+}
+
+.List-Box i:hover{
+    cursor: pointer;
+}
+
+.List-Box hr{
+    margin: 0 15px;
+}
