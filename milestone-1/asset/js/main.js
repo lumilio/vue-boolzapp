@@ -23,13 +23,14 @@ const app = new Vue({
 
             {
                 name: 'Michele',
+                foto: './avatar-pics/avatar_1.jpg',
                 avatar: '_1',
                 visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai portato a spasso il cane?',
-                        status: 'sent'
+                        status: 'sent',
                     },
                     {
                         date: '10/01/2020 15:50:00',
@@ -46,6 +47,7 @@ const app = new Vue({
            
             {
                 name: 'Fabio',
+                foto: './avatar-pics/avatar_2.jpg',
                 avatar: '_2',
                 visible: true,
                 messages: [
@@ -69,6 +71,7 @@ const app = new Vue({
 
             {
                 name: 'Samuele',
+                foto: './avatar-pics/avatar_3.jpg',
                 avatar: '_3',
                 visible: true,
                 messages: [
@@ -92,6 +95,7 @@ const app = new Vue({
 
             {
                 name: 'Luisa',
+                foto: './avatar-pics/avatar_4.jpg',
                 avatar: '_4',
                 visible: true,
                 messages: [

@@ -56,25 +56,24 @@
 
                  <!----------------lista contatti-->
 
+
+
+
+
+
+
+
+
                 <div id="Blocco-Utenti">
-                    <div class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
+
+
+                    <div v-for='(contact, index) in contacts' class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
                         <div class="d-flex align-items-center">
-                            <img src="./avatar-pics/avatar_1.jpg" class="Avatar-pic">
-                            <p class="Avatar-name">Mario Rossi</p>
+                            <img v-bind:src="contact.foto" class="Avatar-pic">
+                            <p class="Avatar-name">{{contact.name}}</p>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
-                        <div class="d-flex align-items-center">
-                            <img src="./avatar-pics/avatar_1.jpg" class="Avatar-pic">
-                            <p class="Avatar-name">Mario Rossi</p>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
-                        <div class="d-flex align-items-center">
-                            <img src="./avatar-pics/avatar_1.jpg" class="Avatar-pic">
-                            <p class="Avatar-name">Mario Rossi</p>
-                        </div>
-                    </div>
+                    
                     
                 </div>
 
@@ -83,7 +82,15 @@
 
 
             
+         
             
+
+
+
+
+
+
+
             <div class="col-8" id="Blocco-Chatting">  <!------------------------  Chat place  ------------------------> 
 
                 <!----------------dati interlocutore-->
