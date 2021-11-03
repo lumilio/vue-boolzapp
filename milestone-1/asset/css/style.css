@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #dadbd5;
+}
+
+#Blocco-sfondo-1{
+    height: 150px;
+    background-color: #009688;
+}
+
+#Blocco-interattivo{
+    margin-top: -80px;
+    background-color: aliceblue;
+}
+
+
+
+/*---------- blocchi aside ------- */
+
+#Blocco-Avatar{
+    height: 80px;
+    background-color: aqua;
+}
+
+#Blocco-Banner{
+    height: 90px;
+    background-color: red;
+}
+
+#Blocco-Ricercautenti{
+    height: 50px;
+    background-color: black;
+}
+
+#Blocco-Utenti{
+    height: 300px;
+    background-color: lightblue;
+}
+
+
+
+/*---------- blocchi Chat ------- */
+
+#Blocco-Chatting{
+    height: 80px;
+    background-color: orange;
+}
+
+#Blocco-Chatter{
+    height: 80px;
+    background-color: orange;
+}
+
