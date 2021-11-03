@@ -20,6 +20,7 @@ const app = new Vue({
         active: 0,
         newMessage:'',
         error: false,
+        searchContact:'',
 
         contacts: [
 
@@ -121,6 +122,24 @@ const app = new Vue({
         selectChat(x){
             this.active = x;
         },
+
+/*         searchName(z){
+            const {value} = this.searchContact;
+              if (value) {
+                this.contacts.filter(({name}) => {
+
+                  if (name.toUpperCase().indexOf(value.toUpperCase()) > -1) {
+                    this.contacts[z].visible = true;
+                  }
+
+                })
+              } else {
+                this.contacts[z].visible = false;
+              }
+              console.log(z);
+              console.log(this.contacts[z].visible);
+        }, */
+
 
 
         addMessage(){ 
