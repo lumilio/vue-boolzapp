@@ -29,13 +29,13 @@ aside{
 }
 
 #Blocco-Avatar{
-    height: 80px;
+    height: 100px;
     background-color: #eaeaea;
     border-right: 1px solid #c2c2c2;
 }
 
 #Blocco-Banner{
-    height: 90px;
+    height: 110px;
     background-color: #8edafc;
 }
 
@@ -45,7 +45,7 @@ aside{
 }
 
 #Blocco-Utenti{
-    height: calc(100% - (80px + 90px + 50px));
+    height: calc(100% - (100px + 110px + 50px));
     background-color: white;
     overflow-y:scroll;
 }
@@ -59,18 +59,52 @@ aside{
 }
 
 #Blocco-Chatter{
-    height: 80px;
+    height: 100px;
     background-color: #eaeaea;
 }
 
 #Blocco-Chat{
-    height: calc(100% - (80px + 80px));
+    height: calc(100% - (100px + 90px));
     background-image: url('css-picture/sfondochat.png');
     overflow-y:scroll;
 }
 
 #Blocco-Write{
-    height: 80px;
+    height: 90px;
     background-color: #eaeaea;
 }
 
+
+
+/*---------- id="Blocco-Avatar" ------- */
+
+.Avatar-pic{
+    width: 80px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 20px;
+}
+
+.Avatar-name{
+    margin-left: 20px;
+    margin-bottom: 0;
+    line-height: 50px;
+    font-size: larger;
+}
+
+.Icone-avatar {
+    margin-right: 35px;
+}
+
+.Icone-avatar i{
+    font-size: 30px;
+    color: #b1b1b1;
+    padding: 8px;
+}
+
+.Icone-avatar i:hover{
+    cursor: pointer;
+    color: #585858;
+}
+
+/*---------- ------- */
