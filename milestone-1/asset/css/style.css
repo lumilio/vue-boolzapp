@@ -16,12 +16,17 @@ body{
 
 #Blocco-interattivo{
     margin-top: -80px;
+    height: 80vh;
     background-color: aliceblue;
 }
 
 
 
 /*---------- blocchi aside ------- */
+
+aside{
+    height: 100%;
+}
 
 #Blocco-Avatar{
     height: 80px;
@@ -39,7 +44,7 @@ body{
 }
 
 #Blocco-Utenti{
-    height: 520px;
+    height: calc(100% - (80px + 90px + 50px));
     background-color: lightblue;
     overflow-y:scroll;
 }
@@ -48,6 +53,9 @@ body{
 
 /*---------- blocchi 'Blocco-Chatting' ------- */
 
+#Blocco-Chatting{
+    height: 100%;
+}
 
 #Blocco-Chatter{
     height: 80px;
@@ -55,7 +63,7 @@ body{
 }
 
 #Blocco-Chat{
-    height: 580px;
+    height: calc(100% - (80px + 80px));
     background-color: blue;
     overflow-y:scroll;
 }
