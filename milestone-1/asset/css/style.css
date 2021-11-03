@@ -206,6 +206,7 @@ aside{
     color: #202020;
 }
 
+
 /* -------- Chat (lista messaggi) ------*/
 
 
@@ -223,19 +224,19 @@ aside{
 }
 
 .Message-sent p{
-    background-color: grey;
-    width: 300;
-    display: flex;
-
+    background-color: white;
 }
 
 .Message-recived p{
-    background-color: green;
-    width: 300;
-    display: flex;
+    background-color: #d5f9ba;
 }
 
-
+.Message-recived p, .Message-sent p{
+    margin: 20px;
+    font-size: large;
+    padding: 1rem;
+    border-radius: 20px;
+}
 
 
 
