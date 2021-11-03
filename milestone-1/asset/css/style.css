@@ -30,12 +30,13 @@ aside{
 
 #Blocco-Avatar{
     height: 80px;
-    background-color: aqua;
+    background-color: #eaeaea;
+    border-right: 1px solid #c2c2c2;
 }
 
 #Blocco-Banner{
     height: 90px;
-    background-color: red;
+    background-color: #8edafc;
 }
 
 #Blocco-Ricercautenti{
@@ -59,17 +60,17 @@ aside{
 
 #Blocco-Chatter{
     height: 80px;
-    background-color: orange;
+    background-color: #eaeaea;
 }
 
 #Blocco-Chat{
     height: calc(100% - (80px + 80px));
-    background-color: blue;
+    background-image: url('../milestone-1/asset/immagini/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
     overflow-y:scroll;
 }
 
 #Blocco-Write{
     height: 80px;
-    background-color: orange;
+    background-color: #eaeaea;
 }
 
