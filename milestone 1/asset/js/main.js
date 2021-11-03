@@ -6,29 +6,11 @@ const app = new Vue({
     el: '#root',
 
     data: { 
-        newTask:'',
-        tasks: [
-            'Fare la spesa',
-            'Fare la cena',
-            'Fare gli esercizzi',
-        ],
-        error: false,
+        
     },
 
     methods: { 
-        removeTask(x){  /*--------------- interattività pulsante che cancella task */
-            this.tasks.splice(x, 1);
-        },
-        addTask(){ 
-            if(this.newTask !=''){  
-                this.tasks.push(this.newTask);
-                this.error = false;
-            } else{  /*--------------- in caso l'input sia vuoto restituisco errore */
-                this.error = true;
-            };
-    
-            this.newTask = '';   /*--------------- rimuovo il contenuto nell'input dopo l'invio */
-        }
+        
     },
 
     

@@ -9,46 +9,18 @@
     <link rel='stylesheet' href="asset/css/style.css">
 </head>
 <body>
+
+
+
+
     <div id="root">
-        <div class="Main-Box container d-flex align-items-center flex-column">          
-            <img src="http://boolean.careers/images/misc/logo.png" alt="">
-
-
-            <!----------------------- all'invio di un valore corretto viene eseguita la funzione 'addTask' -->
-            <div class="The-Form flex-row p-3">
-               <input type="text" v-model='newTask' @keyup.enter='addTask'> 
-               <button v-on:click='addTask'>Add</button>
-               <div v-show='error'>You must write something :/</div>  
-            </div> 
-
-
-            <div class="Second-Box d-flex flex-column bg-white">
-                <p class="List-Title"><b>Todo list</b></p>
-                <div class="List-Box">
-
-                    <div v-if='tasks.length > 0'> <!----------------------- mostro gli elementi dell'arrey -->
-                        <div v-for='(task, index) in tasks'>
-                            <div class="List-Element">
-                                <div class="d-flex justify-content-between">
-                                    <p>{{task}}</p>
-                                    <i v-on:click='removeTask(index)' class="fas fa-times"></i>
-                                </div>
-                                <hr class="">
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div v-else>   <!----------------------- coontenuto in assenza di elementi nell'arrey -->
-                        <p>all tasks completed !</p>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>      
+        
     </div>
 
+
+
+
+    
     <!----------------------- collegamenti ------------------------->
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
