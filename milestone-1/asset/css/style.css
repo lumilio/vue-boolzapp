@@ -41,6 +41,7 @@ body{
 #Blocco-Utenti{
     height: 520px;
     background-color: lightblue;
+    overflow-y:scroll;
 }
 
 
@@ -56,6 +57,7 @@ body{
 #Blocco-Chat{
     height: 580px;
     background-color: blue;
+    overflow-y:scroll;
 }
 
 #Blocco-Write{
