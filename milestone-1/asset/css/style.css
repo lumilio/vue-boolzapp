@@ -39,20 +39,26 @@ body{
 }
 
 #Blocco-Utenti{
-    height: 300px;
+    height: 520px;
     background-color: lightblue;
 }
 
 
 
-/*---------- blocchi Chat ------- */
+/*---------- blocchi 'Blocco-Chatting' ------- */
 
-#Blocco-Chatting{
+
+#Blocco-Chatter{
     height: 80px;
     background-color: orange;
 }
 
-#Blocco-Chatter{
+#Blocco-Chat{
+    height: 580px;
+    background-color: blue;
+}
+
+#Blocco-Write{
     height: 80px;
     background-color: orange;
 }
