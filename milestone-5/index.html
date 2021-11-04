@@ -84,9 +84,8 @@
                         <img :src="contacts[active].foto" class="Avatar-pic">
                         <div class="Banner-txt d-flex flex-column justify-content-start">
                             <p class="Avatar-name">{{contacts[active].name}}</p>
-                            <p class="Avatar-access"
-                                v-if="contacts[active].messages[this.contacts[this.active].messages.length - 1].status == 'sent'">
-                                Ultimo messaggio : {{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}
+                            <p class="Avatar-access">
+                                Ultimo messaggio inviato : {{contacts[active].messages[1].date}}
                             </p> <!-- *** -->
                         </div>
                     </div>
