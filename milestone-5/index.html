@@ -84,7 +84,7 @@
                         <img :src="contacts[active].foto" class="Avatar-pic">
                         <div class="Banner-txt d-flex flex-column justify-content-start">
                             <p class="Avatar-name">{{contacts[active].name}}</p>
-                            <p class="Avatar-access">Ultimo accesso oggi alle</p>
+                            <p class="Avatar-access">Ultimo accesso oggi alle {{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}</p>
                         </div>
                     </div>
                     <div class="Icone-avatar">

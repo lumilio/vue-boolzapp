@@ -17,10 +17,11 @@ const app = new Vue({
 
     data: { 
 
-        active: 0,
+        
         newMessage:'',
-        error: false, /* ------eventuale messaggio di errore */
         searchContact:'',
+        active: 0,
+        error: false, /* ------eventuale messaggio di errore */
 
         contacts: [
 
@@ -121,7 +122,10 @@ const app = new Vue({
     methods: { 
         selectChat(x){
             this.active = x;
-        },
+            console.log(this.contacts[this.active].messages[this.contacts[this.active].messages.length]);
+            console.log(this.contacts[this.active].messages.length);
+            
+        },  
 
 
         searchName(){    
@@ -135,19 +139,17 @@ const app = new Vue({
         },  
 
 
-
-
         addMessage(){ 
             if(this.newMessage !=''){  
                 this.contacts[this.active].messages.push(
                     {
-                        date: '20/03/2020 16:30:00',
+                        date: new Date().toLocaleString(),
                         text:this.newMessage,
                         status: 'recived',
                     });
                     setTimeout(function () { app.contacts[app.active].messages.push(
                         {
-                            date: '20/03/2020 16:30:00',
+                            date: new Date().toLocaleString(),
                             text:'ciao sono un robot non ti posso rispondere',
                             status: 'sent',
                         }
@@ -168,6 +170,16 @@ const app = new Vue({
 
 
 
+/* ------ debug utility -----*/
+
+/* 
+console.log(this.contacts[this.active].messages[this.contacts[this.active].messages.length]);
+console.log(this.contacts[this.active].messages.length); 
+*/
+
+
+
+
 
 
 /* primo tentativo milestone-2*/
@@ -179,19 +191,6 @@ const app = new Vue({
         app.contacts[i].visible = true;
     } 
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
