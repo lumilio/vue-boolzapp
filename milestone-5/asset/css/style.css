@@ -157,6 +157,16 @@ aside{
     cursor: pointer;
 }
 
+.Avatar-name{
+    line-height: 20px; 
+}
+
+.Avatar-name span{
+    font-size: 15px;
+    line-height: 40px;
+    color: #585858;
+}
+
 
 
 
@@ -252,6 +262,13 @@ aside{
     font-size: large;
     padding: 1rem;
     border-radius: 20px;
+}
+
+.Message-recived p span, .Message-sent p span{
+    color: #6f6f6f;
+    font-size: small;
+    padding: 0.2rem;
+
 }
 
 

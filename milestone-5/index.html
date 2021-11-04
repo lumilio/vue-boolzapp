@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boolzap milestone-4</title>
+    <title>Boolzap milestone-5</title>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <link rel='stylesheet' href="asset/css/style.css">
 </head>
@@ -66,8 +66,7 @@
 
                         <div class="d-flex align-items-center">
                             <img v-bind:src="contact.foto" class="Avatar-pic">
-                            <p class="Avatar-name">{{contact.name}}</p>
-                            <p class="Avatar-name">{{contact.messages[contact.lastIndex].date}}</p> <!-- *** -->
+                            <p class="Avatar-name d-flex flex-column">{{contact.name}} <span>{{contact.messages[contact.lastIndex].date}}</span></p>
                         </div>
                     </div>                   
                 </div>
@@ -105,8 +104,7 @@
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
                         <div class="Box-messaggio">
-                            <p>{{message.text}}</p>
-                            <p>{{message.date}}</p> <!-- *** -->
+                            <p class="d-flex flex-column">{{message.text}} <span>{{message.date}}</span> </p>
                         </div>
                     </div>
                 </div>
