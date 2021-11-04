@@ -19,7 +19,7 @@ const app = new Vue({
 
         active: 0,
         newMessage:'',
-        error: false,
+        error: false, /* ------eventuale messaggio di errore */
         searchContact:'',
 
         contacts: [
@@ -124,19 +124,13 @@ const app = new Vue({
         },
 
 
-        searchName(){
-
-            
+        searchName(){    
             for (let i = 0; i < this.contacts.length; i++) {
 
-                
-                if(this.contacts[i].name.toUppercase().indexOf(this.searchContact.toUppercase() > -1))
-                {this.contacts[i].visible = true}
-
-
-
-                else{this.contacts[i].visible = false}
-                
+                if(this.contacts[i].name.toUpperCase().includes(this.searchContact.toUpperCase()))
+                    {this.contacts[i].visible = true}
+                else
+                    {this.contacts[i].visible = false}
             }
         },  
 
@@ -185,6 +179,7 @@ const app = new Vue({
         app.contacts[i].visible = true;
     } 
 } */
+
 
 
 
