@@ -50,7 +50,7 @@
                 <!----------------blocco ricerca utenti-->
 
                 <div class="d-flex align-items-center justify-content-center" id="Blocco-Ricercautenti">
-                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model='searchContact' @keyup.enter='searchName()'>
+                    <input type="text" placeholder="Cerca o inizia una nuova chat" v-model='searchContact' @keyup.enter='searchName'>
                     <i class="fas fa-search"></i>
                 </div>
 
@@ -58,9 +58,10 @@
 
                 <div id="Blocco-Utenti">
 
-                    <div 
+                    <div
                     v-for='(contact, index) in contacts' 
                     v-on:click='selectChat(index)'
+                    v-bind:class ="(contact.visible == false)?'d-none':''" 
                     class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
 
                         <div class="d-flex align-items-center">

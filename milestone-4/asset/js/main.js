@@ -28,7 +28,7 @@ const app = new Vue({
                 name: 'Michele',
                 foto: './avatar-pics/avatar_1.jpg',
                 avatar: '_1',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -52,7 +52,7 @@ const app = new Vue({
                 name: 'Fabio',
                 foto: './avatar-pics/avatar_2.jpg',
                 avatar: '_2',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -76,7 +76,7 @@ const app = new Vue({
                 name: 'Samuele',
                 foto: './avatar-pics/avatar_3.jpg',
                 avatar: '_3',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -100,7 +100,7 @@ const app = new Vue({
                 name: 'Luisa',
                 foto: './avatar-pics/avatar_6.jpg',
                 avatar: '_4',
-                visible: false,
+                visible: true,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -123,22 +123,18 @@ const app = new Vue({
             this.active = x;
         },
 
-/*         searchName(z){
-            const {value} = this.searchContact;
-              if (value) {
-                this.contacts.filter(({name}) => {
 
-                  if (name.toUpperCase().indexOf(value.toUpperCase()) > -1) {
-                    this.contacts[z].visible = true;
-                  }
+        searchName(){
+            for (let i = 0; i < this.contacts.length; i++) {
+                if(3<1){this.contacts[i].visible = true}
 
-                })
-              } else {
-                this.contacts[z].visible = false;
-              }
-              console.log(z);
-              console.log(this.contacts[z].visible);
-        }, */
+
+
+                else{this.contacts[i].visible = false}
+                
+            }
+        },  
+
 
 
 
@@ -158,8 +154,8 @@ const app = new Vue({
                         }
                     ) }, 1000)
 
-
-                this.error = false; /* ------eventuale messaggio di errore */
+            /* ------eventuale messaggio di errore */
+                this.error = false; 
             } else{  
                 this.error = true;
             };
@@ -183,7 +179,6 @@ const app = new Vue({
     } else{
         app.contacts[i].visible = true;
     } 
-    app.active = x;
 } */
 
 
