@@ -129,16 +129,7 @@ const app = new Vue({
 
 
 
-
-
-
     methods: { 
-
-
-
-        
-
-
 
 
 
@@ -157,6 +148,10 @@ const app = new Vue({
             }
         },  
 
+
+
+
+        /* ------ funzione per aggiungere il messaggio */
 
         addMessage(){ 
             if(this.newMessage !=''){ 
@@ -178,10 +173,7 @@ const app = new Vue({
                         }
                 ) }, 1000)
 
-
-            /* ------eventuale messaggio di errore */
-
-                this.error = false; 
+                this.error = false; /* ------eventuale messaggio di errore */
             } else{  
                 this.error = true;
             };
@@ -189,6 +181,9 @@ const app = new Vue({
             this.newMessage = ''
 
         },
+
+
+
 
 
         /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */

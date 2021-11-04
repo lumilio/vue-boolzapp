@@ -66,7 +66,8 @@
 
                         <div class="d-flex align-items-center">
                             <img v-bind:src="contact.foto" class="Avatar-pic">
-                            <p class="Avatar-name">{{contact.name}}</p> <!-- *** -->
+                            <p class="Avatar-name">{{contact.name}}</p>
+                            <p class="Avatar-name">{{contact.messages[contact.lastIndex].date}}</p> <!-- *** -->
                         </div>
                     </div>                   
                 </div>
@@ -86,7 +87,7 @@
                             <p class="Avatar-name">{{contacts[active].name}}</p>
                             <p class="Avatar-access">
                                 Ultimo messaggio inviato : {{contacts[active].messages[contacts[active].lastIndex].date}}
-                            </p> <!-- *** -->
+                            </p> 
                         </div>
                     </div>
                     <div class="Icone-avatar">
@@ -104,7 +105,8 @@
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
                         <div class="Box-messaggio">
-                            <p>{{message.text}}</p> <!-- *** -->
+                            <p>{{message.text}}</p>
+                            <p>{{message.date}}</p> <!-- *** -->
                         </div>
                     </div>
                 </div>
