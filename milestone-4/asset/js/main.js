@@ -125,8 +125,13 @@ const app = new Vue({
 
 
         searchName(){
+
+            
             for (let i = 0; i < this.contacts.length; i++) {
-                if(3<1){this.contacts[i].visible = true}
+
+                
+                if(this.contacts[i].name.toUppercase().indexOf(this.searchContact.toUppercase() > -1))
+                {this.contacts[i].visible = true}
 
 
 
