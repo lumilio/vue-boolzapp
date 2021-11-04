@@ -66,7 +66,7 @@
 
                         <div class="d-flex align-items-center">
                             <img v-bind:src="contact.foto" class="Avatar-pic">
-                            <p class="Avatar-name">{{contact.name}}</p>
+                            <p class="Avatar-name">{{contact.name}}</p> <!-- *** -->
                         </div>
                     </div>                   
                 </div>
@@ -84,7 +84,10 @@
                         <img :src="contacts[active].foto" class="Avatar-pic">
                         <div class="Banner-txt d-flex flex-column justify-content-start">
                             <p class="Avatar-name">{{contacts[active].name}}</p>
-                            <p class="Avatar-access">Ultimo accesso oggi alle {{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}</p>
+                            <p class="Avatar-access"
+                                v-if="contacts[active].messages[this.contacts[this.active].messages.length - 1].status == 'sent'">
+                                Ultimo messaggio : {{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}
+                            </p> <!-- *** -->
                         </div>
                     </div>
                     <div class="Icone-avatar">
@@ -102,7 +105,7 @@
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
                         <div class="Box-messaggio">
-                            <p>{{message.text}}</p>
+                            <p>{{message.text}}</p> <!-- *** -->
                         </div>
                     </div>
                 </div>
@@ -114,9 +117,9 @@
                     <input type="text" placeholder="Scrivi un messaggio" 
                     v-model='newMessage'
                     @keyup.enter='addMessage'>
-                    
-                    
+
                     <i class="fas fa-microphone"></i>
+
                 </div>
 
             </div>

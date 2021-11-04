@@ -119,13 +119,18 @@ const app = new Vue({
     },
 
 
+
+
+
     methods: { 
         selectChat(x){
             this.active = x;
+        }, 
+        
+        getLastMessage(z){
             console.log(this.contacts[this.active].messages[this.contacts[this.active].messages.length]);
             console.log(this.contacts[this.active].messages.length);
-            
-        },  
+        },
 
 
         searchName(){    
@@ -175,6 +180,9 @@ const app = new Vue({
 /* 
 console.log(this.contacts[this.active].messages[this.contacts[this.active].messages.length]);
 console.log(this.contacts[this.active].messages.length); 
+
+{{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}
+
 */
 
 
