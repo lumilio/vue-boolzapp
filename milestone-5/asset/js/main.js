@@ -136,10 +136,15 @@ const app = new Vue({
 
 
 
+        
+
+
+
+
+
         selectChat(x){
             this.active = x;
         }, 
-
         
 
         searchName(){    
@@ -161,14 +166,17 @@ const app = new Vue({
                         date: new Date().toLocaleString(),
                         text:this.newMessage,
                         status: 'recived',
-                    });
-                    setTimeout(function () { app.contacts[app.active].messages.push(
+                    }
+                );
+
+                setTimeout(function () { 
+                    app.contacts[app.active].messages.push(
                         {
                             date: new Date().toLocaleString(),
                             text:'ciao sono un robot non ti posso rispondere',
                             status: 'sent',
                         }
-                    ) }, 1000)
+                ) }, 1000)
 
 
             /* ------eventuale messaggio di errore */
@@ -178,55 +186,34 @@ const app = new Vue({
                 this.error = true;
             };
 
-
-            this.newMessage = '';
-
-
-            /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */
-
-            for (let i = 0; i < this.contacts[this.active].messages.length; i++) {
-                if(this.contacts[this.active].messages[i].status == 'sent' && !(this.contacts[this.active].sendIndex.includes(i))){
-                    this.contacts[this.active].sendIndex.push(i)
-                    this.contacts[this.active].lastIndex = Math.max.apply(Math, this.contacts[this.active].sendIndex)
-                };
-            } 
-            
-            console.log(this.contacts[0].sendIndex);
-            console.log(this.contacts[0].messages);
-            console.log(this.contacts[0].lastIndex);
+            this.newMessage = ''
 
         },
+
+
+        /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */
+
+
+        getLastMessage(c){
+            for (let i = 0; i < this.contacts[c].messages.length; i++) {
+                if(this.contacts[c].messages[i].status == 'sent' && !(this.contacts[c].sendIndex.includes(i))){
+                    this.contacts[c].sendIndex.push(i)
+                    this.contacts[c].lastIndex = Math.max.apply(Math, this.contacts[c].sendIndex)
+                };
+            }
+        },
+
+        loadingMessage : function(){
+            for (let index = 0; index < this.contacts.length; index++) { this.getLastMessage(index) }
+        },    
 
 
     },
 
 
 
-
-
     mounted(){
-
-        /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */
-
-        for (let index = 0; index < this.contacts.length; index++) {
-            for (let i = 0; i < this.contacts[index].messages.length; i++) {
-                if(this.contacts[index].messages[i].status == 'sent'){
-                    this.contacts[index].sendIndex.push(i)
-                    this.contacts[index].lastIndex = Math.max.apply(Math, this.contacts[index].sendIndex)
-                };
-            }  
-        }
-/* 
-        setInterval(function () {
-            for (let index = 0; index < this.contacts.length; index++) {
-                for (let i = 0; i < this.contacts[index].messages.length; i++) {
-                    if(this.contacts[index].messages[i].status == 'sent'){
-                        this.contacts[index].sendIndex.push(i)
-                        this.contacts[index].lastIndex = Math.max.apply(Math, this.contacts[index].sendIndex)
-                    };
-                }  
-            }
-        }, 200) */
+        setInterval(this.loadingMessage, 100)
     } 
 
 
