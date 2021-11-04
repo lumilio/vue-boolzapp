@@ -85,7 +85,7 @@
                         <div class="Banner-txt d-flex flex-column justify-content-start">
                             <p class="Avatar-name">{{contacts[active].name}}</p>
                             <p class="Avatar-access">
-                                Ultimo messaggio inviato : {{contacts[active].messages[1].date}}
+                                Ultimo messaggio inviato : {{contacts[active].messages[contacts[active].lastIndex].date}}
                             </p> <!-- *** -->
                         </div>
                     </div>

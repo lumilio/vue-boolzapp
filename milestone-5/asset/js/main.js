@@ -31,6 +31,7 @@ const app = new Vue({
                 avatar: '_1',
                 visible: true,
                 sendIndex:[],
+                lastIndex:0,
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -56,6 +57,7 @@ const app = new Vue({
                 avatar: '_2',
                 visible: true,
                 sendIndex:[],
+                lastIndex:0,
                 messages: [
                     {
                         date: '20/03/2020 16:30:00',
@@ -81,6 +83,7 @@ const app = new Vue({
                 avatar: '_3',
                 visible: true,
                 sendIndex:[],
+                lastIndex:0,
                 messages: [
                     {
                         date: '28/03/2020 10:10:40',
@@ -106,6 +109,7 @@ const app = new Vue({
                 avatar: '_4',
                 visible: true,
                 sendIndex:[],
+                
                 messages: [
                     {
                         date: '10/01/2020 15:30:55',
@@ -198,44 +202,49 @@ const app = new Vue({
                         }
                     ) }, 1000)
 
+
             /* ------eventuale messaggio di errore */
+
                 this.error = false; 
             } else{  
                 this.error = true;
             };
+
+
             this.newMessage = '';
 
+
+            /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey */
 
             for (let i = 0; i < this.contacts[this.active].messages.length; i++) {
                 if(this.contacts[this.active].messages[i].status == 'sent' && !(this.contacts[this.active].sendIndex.includes(i))){
                     this.contacts[this.active].sendIndex.push(i)
+                    this.contacts[this.active].lastIndex = Math.max.apply(Math, this.contacts[this.active].sendIndex)
                 };
             } 
-
- 
             
             console.log(this.contacts[0].sendIndex);
             console.log(this.contacts[0].messages);
+            console.log(this.contacts[0].lastIndex);
 
         },
-
-
-
-
-
-
-
 
 
     },
 
 
+
+
+
     mounted(){
+
+        /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey */
 
         for (let index = 0; index < this.contacts.length; index++) {
             for (let i = 0; i < this.contacts[index].messages.length; i++) {
                 if(this.contacts[index].messages[i].status == 'sent'){
                     this.contacts[index].sendIndex.push(i)
+                    this.contacts[index].lastIndex = Math.max.apply(Math, this.contacts[index].sendIndex)
                 };
             }  
         }
