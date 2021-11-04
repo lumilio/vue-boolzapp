@@ -159,13 +159,10 @@ const app = new Vue({
                     ) }, 1000)
 
 
-                this.error = false;
-
-
+                this.error = false; /* ------eventuale messaggio di errore */
             } else{  
                 this.error = true;
             };
-    
             this.newMessage = '';   
         } 
     },
