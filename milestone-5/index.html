@@ -84,7 +84,7 @@
                         <div class="Banner-txt d-flex flex-column justify-content-start">
                             <p class="Avatar-name">{{contacts[active].name}}</p>
                             <p class="Avatar-access">
-                                Ultimo messaggio inviato : {{contacts[active].messages[contacts[active].lastIndex].date}}
+                                Ultimo accesso {{contacts[active].messages[contacts[active].lastIndex].date}}
                             </p> 
                         </div>
                     </div>
@@ -102,11 +102,12 @@
                     v-for="(message, index) in contacts[active].messages" 
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
-                        <div class="Box-messaggio d-flex align-items-center">
+                        <div class="Box-messaggio d-flex align-items-center"
+                             v-bind:class ="(message.hide == true)?'d-none':''">
                             <p class="d-flex flex-column">{{message.text}}  <span>{{message.date}} <i v-on:click='showOption(message)' class="fas fa-bars"></i></span> </p>
                             <div class="option-menu d-flex align-items-center" v-bind:class ="(message.optionMenu == false)?'d-none':''">
                                 <p>Info</p>
-                                <p v-on:click='delateMessage(message)'>Elimina</p>
+                                <p v-on:click='hideMessage(message)'>Elimina</p>
                             </div>
                         </div>
                     </div>
