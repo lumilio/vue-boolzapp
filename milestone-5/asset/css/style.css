@@ -271,7 +271,10 @@ aside{
 
 }
 
+.Message-recived p span i, .Message-sent p span i{
+    margin-left: 10px;
 
+}
 
 
 

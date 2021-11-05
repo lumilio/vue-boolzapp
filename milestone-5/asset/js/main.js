@@ -224,37 +224,6 @@ const app = new Vue({
 
 
 
-/* ------ debug utility -----*/
-
-/* 
-console.log(this.contacts[this.active].messages[this.contacts[this.active].messages.length]);
-console.log(this.contacts[this.active].messages.length); 
-
-{{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}
-
-
-<p class="Avatar-access"
-                                v-if="contacts[active].messages[this.contacts[this.active].messages.length - 1].status == 'sent'">
-                                Ultimo messaggio : {{contacts[active].messages[this.contacts[this.active].messages.length - 1].date}}
-                            </p> <!-- *** -->
-*/
-
-
-
-
-
-
-/* primo tentativo milestone-2*/
-
-/* for (let i = 0; i < app.contacts.length; i++) {
-    if(app.contacts[i] != app.contacts[x]){
-        app.contacts[i].visible = false;
-    } else{
-        app.contacts[i].visible = true;
-    } 
-} */
-
-
 
 /* 
 v-model:
