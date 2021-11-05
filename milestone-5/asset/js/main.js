@@ -157,7 +157,6 @@ const app = new Vue({
         /* ------ funzione per selezionare la chat da mostrare */
         selectChat(x){
             this.active = x
-            console.log(this.contacts[this.active].visible);;
         }, 
         
 
@@ -176,12 +175,20 @@ const app = new Vue({
 
 
 
+        /* ------ funzione per scroll automatico all'aggiunta messaggio */
+        keepChatLow: function(){
+            const container = this.$el.querySelector("#Blocco-Chat");
+            container.scrollTop = container.scrollHeight;
+        },
+
+
 
 
         /* ------ funzione per aggiungere il messaggio */
         addMessage(){ 
             if(this.newMessage !=''){ 
                 
+
                 this.contacts[this.active].messages.push(
                     {
                         date: new Date().toLocaleString(),
@@ -191,6 +198,8 @@ const app = new Vue({
                         hide: false,
                     }
                 );
+                setTimeout(this.keepChatLow, 10)
+                
 
                 setTimeout(function () { 
                     app.contacts[app.active].messages.push(
@@ -201,12 +210,19 @@ const app = new Vue({
                             optionMenu: false, 
                             hide: false,
                         }
-                ) }, 1000)
+                    ) }
+                , 1000)
+                setTimeout(this.keepChatLow, 1000)
+
+
+
+
 
                 this.error = false; /* ------eventuale messaggio di errore */
             } else{  
                 this.error = true;
             };
+
 
             this.newMessage = ''
 
@@ -233,19 +249,20 @@ const app = new Vue({
 
         
 
+
          /* ------ funzioni pulsante opzioni messaggio */
 
-         showOption(x){
-
+        showOption(x){
             if(x.optionMenu == true){
                 x.optionMenu = false; 
             } else{x.optionMenu = true;}
-         },
+        },
                                                             
 
-         hideMessage(x){
+        hideMessage(x){
             x.hide = true; 
-         },
+        },
+
 
 
     },
@@ -260,6 +277,7 @@ const app = new Vue({
 
     
 })
+
 
 
 
