@@ -18,7 +18,7 @@
         <div class="container d-flex p-0" id="Blocco-interattivo">
 
 
-            
+
 
             <aside class="col-4">   <!------------------------  aside  ------------------------> 
 
@@ -60,7 +60,7 @@
                 <div id="Blocco-Utenti">
 
                     <div
-                    v-for='contact in contacts' 
+                    v-for='(contact, index) in contacts' 
                     v-on:click='selectChat(index)'
                     v-bind:class ="(contact.visible == false)?'d-none':''"
                     class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
