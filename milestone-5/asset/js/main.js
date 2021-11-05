@@ -154,11 +154,16 @@ const app = new Vue({
     methods: { 
 
 
+        /* ------ funzione per selezionare la chat da mostrare */
 
         selectChat(x){
             this.active = x;
         }, 
         
+
+
+
+        /* ------ funzione per cercare nome contatto nel input text cerca contatto */
 
         searchName(){    
             for (let i = 0; i < this.contacts.length; i++) {
@@ -230,8 +235,6 @@ const app = new Vue({
         
 
 
-
-
          /* ------ funzioni pulsante opzioni messaggio */
 
          showOption(x){
@@ -240,11 +243,10 @@ const app = new Vue({
                 x.optionMenu = false; 
             } else{x.optionMenu = true;}
          },
-                                                            /* --------- problema --------- */
+                                                            
 
          hideMessage(x){
             x.hide = true; 
-            console.log(x);
          },
 
 
@@ -255,11 +257,6 @@ const app = new Vue({
     mounted(){
         setInterval(this.loadingMessage, 100)
     } 
-
-
-
-
-
 
 
 
