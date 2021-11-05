@@ -294,6 +294,13 @@ aside{
     border-radius: 0;
     margin: 0;
     line-height: 0;
+    border: 1px solid #d8d8d8;
+}
+
+.option-menu p:hover{
+    background-color: blue;
+    color: white;
+    cursor: pointer;
 }
 
 

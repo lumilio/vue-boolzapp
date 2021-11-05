@@ -36,16 +36,19 @@ const app = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Hai portato a spasso il cane?',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent',
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         text: 'Ricordati di dargli da mangiare',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 16:15:22',
                         text: 'Tutto fatto!',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'received'
                     }
                 ],
@@ -62,16 +65,19 @@ const app = new Vue({
                     {
                         date: '20/03/2020 16:30:00',
                         text: 'Ciao come stai?',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent'
                     },
                     {
                         date: '20/03/2020 16:30:55',
                         text: 'Bene grazie! Stasera ci vediamo?',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'received'
                     },
                     {
                         date: '20/03/2020 16:35:00',
                         text: 'Mi piacerebbe ma devo andare a fare la spesa.',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent'
                     }
                 ],
@@ -88,16 +94,19 @@ const app = new Vue({
                     {
                         date: '28/03/2020 10:10:40',
                         text: 'La Marianna va in campagna',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'received'
                     },
                     {
                         date: '28/03/2020 10:20:10',
                         text: 'Sicuro di non aver sbagliato chat?',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent'
                     },
                     {
                         date: '28/03/2020 16:15:22',
                         text: 'Ah scusa!',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'received'
                     }
                 ],
@@ -114,11 +123,13 @@ const app = new Vue({
                     {
                         date: '10/01/2020 15:30:55',
                         text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 15:50:00',
                         text: 'Si, ma preferirei andare al cinema',
+                        optionMenu: false, /* ---aggiunta */
                         status: 'received'
                     }
                 ],
@@ -147,6 +158,7 @@ const app = new Vue({
                     {this.contacts[i].visible = false}
             }
         },  
+
 
 
 
@@ -185,7 +197,6 @@ const app = new Vue({
 
 
 
-
         /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */
 
 
@@ -200,7 +211,26 @@ const app = new Vue({
 
         loadingMessage : function(){
             for (let index = 0; index < this.contacts.length; index++) { this.getLastMessage(index) }
-        },    
+        },  
+        
+
+
+
+
+         /* ------ funzioni pulsante opzioni messaggio */
+
+         showOption(x){
+
+            if(x.optionMenu == true){
+                x.optionMenu = false; 
+            } else{x.optionMenu = true;}
+         },
+                                                            /* --------- problema --------- */
+
+         delateMessage(x, y){
+            this.contacts[this.active].messages.splice(y, 1);
+            x.optionMenu = false; 
+         },
 
 
     },
