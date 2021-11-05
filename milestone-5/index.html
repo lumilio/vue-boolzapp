@@ -59,8 +59,9 @@
                 <div id="Blocco-Utenti">
 
                     <div
-                    v-for='(contact, index) in contacts' 
+                    v-for='contact in contacts' 
                     v-on:click='selectChat(index)'
+                    v-bind:class ="(contact.visible == false)?'d-none':''"
                     class="d-flex justify-content-between align-items-center" id="Blocco-Avatar">
 
                         <div class="d-flex align-items-center">

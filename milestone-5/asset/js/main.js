@@ -155,16 +155,15 @@ const app = new Vue({
 
 
         /* ------ funzione per selezionare la chat da mostrare */
-
         selectChat(x){
-            this.active = x;
+            this.active = x
+            console.log(this.contacts[this.active].visible);;
         }, 
         
 
 
 
         /* ------ funzione per cercare nome contatto nel input text cerca contatto */
-
         searchName(){    
             for (let i = 0; i < this.contacts.length; i++) {
 
@@ -180,7 +179,6 @@ const app = new Vue({
 
 
         /* ------ funzione per aggiungere il messaggio */
-
         addMessage(){ 
             if(this.newMessage !=''){ 
                 
@@ -219,7 +217,6 @@ const app = new Vue({
 
         /* ------ aggiungo l'indice del messaggio inviato dal bot in arrey specifico */
 
-
         getLastMessage(c){
             for (let i = 0; i < this.contacts[c].messages.length; i++) {
                 if(this.contacts[c].messages[i].status == 'sent' && !(this.contacts[c].sendIndex.includes(i))){
@@ -234,6 +231,7 @@ const app = new Vue({
         },  
         
 
+        
 
          /* ------ funzioni pulsante opzioni messaggio */
 
