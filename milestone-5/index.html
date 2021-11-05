@@ -103,8 +103,12 @@
                     v-for="message in contacts[active].messages" 
                     v-bind:class ="(message.status == 'sent')?'Message-sent':'Message-recived'" class="">
 
-                        <div class="Box-messaggio">
+                        <div class="Box-messaggio d-flex align-items-center">
                             <p class="d-flex flex-column">{{message.text}}  <span>{{message.date}} <i class="fas fa-bars"></i></span> </p>
+                            <div class="option-menu d-flex align-items-center">
+                                <p>Info</p>
+                                <p>Elimina</p>
+                            </div>
                         </div>
                     </div>
                 </div>
